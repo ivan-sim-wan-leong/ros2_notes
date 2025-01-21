@@ -84,8 +84,8 @@ install(
 )
 
 install(TARGETS 
-  exe_node1 
-  exe_node1
+  node_name1 
+  node_name2
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch config
