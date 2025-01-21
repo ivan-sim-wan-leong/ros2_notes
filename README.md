@@ -95,7 +95,7 @@ install(DIRECTORY launch config
 ### ament export
 ```
 ament_export_dependencies(${dependencies})
-ament_export_include_directories(include)
+ament_export_include_directories(include) # name of folder in install/${PROJECT_NAME}/
 ament_export_libraries(lib1 lib2) # all libraries
 ament_export_targets(${PROJECT_NAME})
 
