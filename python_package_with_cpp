@@ -1,0 +1,24 @@
+## add a folder with same name as package (add __init__.py)
+```
+my_cpp_pkg/
+├── CMakeLists.txt
+├── package.xml
+├── include/
+├── src/
+└── **my_cpp_pkg/** <-- This folder's name must match the package name
+    ├── **__init__.py** <-- Must be here to be a package
+    └── **my_utility.py** <-- can be imported by other packages
+```
+
+## CmakeList.txt
+```
+find_package(ament_cmake_python REQUIRED)
+find_package(rclpy REQUIRED)
+
+ament_python_install_package(${PROJECT_NAME})
+```
+
+## package.xml
+```
+<buildtool_depend>ament_cmake_python</buildtool_depend>
+```
