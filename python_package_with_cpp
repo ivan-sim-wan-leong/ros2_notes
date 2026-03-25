@@ -15,6 +15,11 @@ my_cpp_pkg/
 find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
 
+install(PROGRAMS
+  my_cpp_pkg/python.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
 ament_python_install_package(${PROJECT_NAME})
 ```
 
