@@ -1,5 +1,12 @@
 # Network tuning
-https://autowarefoundation.github.io/autoware-documentation/main/installation/additional-settings-for-developers/network-configuration/dds-settings/  
+https://autowarefoundation.github.io/autoware-documentation/main/installation/additional-settings-for-developers/network-configuration/dds-settings/      
+```
+sudo nano /etc/sysctl.d/10-cyclone-max.conf
+```
+copy the following into the file:    
+net.core.rmem_max=2147483647  # 2 GiB, default is 208 KiB
+net.ipv4.ipfrag_time=3  # in seconds, default is 30 s
+net.ipv4.ipfrag_high_thresh=134217728  # 128 MiB, default is 256 KiB
 
 # cmake
 ### dependencies
