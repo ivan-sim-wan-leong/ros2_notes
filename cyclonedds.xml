@@ -1,0 +1,26 @@
+<CycloneDDS>
+   <Domain>
+     <General>
+        <Interfaces>
+          <NetworkInterface name="wlo1" />
+        </Interfaces>
+        <MaxMessageSize>65500B</MaxMessageSize>
+     </General>
+     <Internal>
+        <SocketReceiveBufferSize min="10MB"/>
+        <Watermarks>
+            <WhcHigh>500kB</WhcHigh>
+        </Watermarks>
+     </Internal>
+    <Discovery>
+      <ParticipantIndex>auto</ParticipantIndex>
+      <MaxAutoParticipantIndex>150</MaxAutoParticipantIndex>
+      <Peers>
+        <Peer Address="192.168.123.129:7410"/> 
+        <!-- <Peer Address="192.168.1.13:7410"/> -->
+        <!-- <Peer Address="192.168.1.186:7410"/> -->
+      </Peers>
+    </Discovery>
+   </Domain>
+</CycloneDDS>
+
