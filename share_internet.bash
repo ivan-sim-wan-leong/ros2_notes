@@ -1,3 +1,6 @@
+### For ubuntu 22 if there is no internet downstream ###
+# sudo ufw enable
+
 # Share Wi-Fi internet over a specified Ethernet interface
 share_wifi_to_lan() {
     # 1. Check if an interface argument was provided
